@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="echarts-5.3.3/dist/echarts.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width: 600px;height:400px;">
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.querySelector('#main'));
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '小米'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['四川', '河北', '山西', '辽宁', '山东']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                series: [
+                    {
+                        data: [6.10, 5.82, 5.82, 5.98, 5.57],
+                        type: 'bar'
+                    }
+                ]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+    </div>
+</body>
+
+</html>
