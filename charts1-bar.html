@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <div id="main" style="width: 720px;height: 480px;">
+    <div id="main" style="width: 600px;height: 400px;">
         <script type="text/javascript">
             // 基于准备好的dom，初始化echarts实例
             var myChart = echarts.init(document.querySelector('#main'));
             // 指定图表的配置项和数据
-            // 以上不用动
+            
             option = {
                 title: {
-                    text: '辣椒评分及各项权重'// 标题根据物种进行小更改
+                    text: '辣椒评分'
                 },
                 tooltip: {
                     trigger: 'axis',
@@ -29,7 +29,6 @@
                 },
                 legend: {},
                 grid: {
-                    top: '50%',
                     left: '3%',
                     right: '3%',
                     bottom: '3%',
@@ -40,7 +39,7 @@
                 },
                 xAxis: {
                     type: 'category',
-                    data: ['四川', '云南', '湖南', '广东', '浙江']//根据数据中的省份改
+                    data: ['四川', '云南', '湖南', '广东', '浙江']
                 },
                 series: [
                     {
@@ -53,8 +52,7 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        
-                        data: [1.56, 1.54, 1.64, 2.06, 1.48]//根据数据改
+                        data: [1.56, 1.54, 1.64, 2.06, 1.48]
                     },
                     {
                         name: '光照',
@@ -66,8 +64,7 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        
-                        data: [1.75, 2.25, 1.75, 2.00, 1.75]//根据数据改
+                        data: [1.75, 2.25, 1.75, 2.00, 1.75]
                     },
                     {
                         name: '水分',
@@ -79,8 +76,7 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        
-                        data: [1.62, 0.80, 1.72, 1.20, 1.50]//根据数据改
+                        data: [1.62, 0.80, 1.72, 1.20, 1.50]
                     },
                     {
                         name: '养分',
@@ -92,8 +88,7 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        
-                        data: [2.00, 1.25, 1.75, 1.88, 1.88]//根据数据改
+                        data: [2.00, 1.25, 1.75, 1.88, 1.88]
                     },
                     {
                         name: '土壤',
@@ -105,8 +100,7 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        
-                        data: [0.40, 0.25, 0.35, 0.38, 0.38]//根据数据改
+                        data: [0.40, 0.25, 0.35, 0.38, 0.38]
                     },
                     {
                         name: '总分',
@@ -118,27 +112,8 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        
-                        data: [7.33, 6.09, 7.21, 7.51, 6.98]//根据数据改
+                        data: [7.33, 6.09, 7.21, 7.51, 6.98]
                     },
-                    {
-                        type: 'pie',
-                        radius: '30%',
-                        center: ['50%', '25%'],
-                        emphasis: {
-                            focus: 'self'
-                        },
-                        label: {
-                            formatter: '{b}: {@d} ({d}%)'
-                        },
-                        data: [
-                            { value: 0.25, name: '气温' },
-                            { value: 0.25, name: '光照' },
-                            { value: 0.20, name: '水分' },
-                            { value: 0.25, name: '养分' },
-                            { value: 0.05, name: '土壤' }
-                        ]
-                    }
                 ]
             };
 

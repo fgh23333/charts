@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="echarts-5.3.3/dist/echarts.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width: 600px;height: 400px;">
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.querySelector('#main'));
+            // 指定图表的配置项和数据
+
+            option = {
+                title: {
+                    text: '大豆各项权重'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        // Use axis to trigger tooltip
+                        type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
+                    }
+                },
+                legend: {},
+                grid: {
+                    left: '3%',
+                    right: '3%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                series: [
+                    {
+                        type: 'pie',
+                        radius: '50%',
+                        center: ['50%', '55%'],
+                        emphasis: {
+                            focus: 'self'
+                        },
+                        label: {
+                            formatter: '{b}: {@d} ({d}%)'
+                        },
+                        data: [
+                            { value: 0.25, name: '气温' },
+                            { value: 0.15, name: '光照' },
+                            { value: 0.30, name: '水分' },
+                            { value: 0.15, name: '养分' },
+                            { value: 0.15, name: '土壤' }
+                        ]
+                    }
+                ]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+    </div>
+</body>
+
+</html>

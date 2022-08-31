@@ -10,18 +10,15 @@
 </head>
 
 <body>
-    <div id="main" style="width: 720px;height: 480px;">
+    <div id="main" style="width: 600px;height: 400px;">
         <script type="text/javascript">
             // 基于准备好的dom，初始化echarts实例
             var myChart = echarts.init(document.querySelector('#main'));
             // 指定图表的配置项和数据
-            // 以上不用动
             option = {
                 title: {
-                    text: '黍米评分及各项权重'// 标题根据物种进行小更改
+                    text: '黍米评分'
                 },
-
-                // 以下不动
                 tooltip: {
                     trigger: 'axis',
                     axisPointer: {
@@ -31,7 +28,6 @@
                 },
                 legend: {},
                 grid: {
-                    top: '50%',
                     left: '3%',
                     right: '3%',
                     bottom: '3%',
@@ -40,13 +36,10 @@
                 yAxis: {
                     type: 'value'
                 },
-                // 以上不动
-
                 xAxis: {
                     type: 'category',
-                    data: ['四川', '河北', '吉林', '陕西']//根据数据中的省份改
+                    data: ['四川', '河北', '吉林', '陕西']
                 },
-                // 以下不动
                 series: [
                     {
                         name: '气温',
@@ -58,10 +51,8 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
-                        data: [1.11, 0.89, 0.69, 0.71]//根据数据改
+                        data: [1.11, 0.89, 0.69, 0.71]
                     },
-                    // 以下不动
                     {
                         name: '光照',
                         type: 'bar',
@@ -72,38 +63,32 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
-                        data: [3.20, 3.00, 2.80, 3.00]//根据数据改
+                        data: [3.20, 3.00, 2.80, 3.00]
                     },
-                    // 以下不动
                     {
                         name: '水分',
                         type: 'bar',
                         stack: 'total',
-                        label: {
-                            show: true
-                        },
+                        // label: {
+                        //     show: true
+                        // },
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
-                        data: [0.00, 0.00, 0.00, 0.00]//根据数据改
+                        data: [0.00, 0.00, 0.00, 0.00]
                     },
-                    // 以下不动
                     {
                         name: '养分',
                         type: 'bar',
                         stack: 'total',
-                        label: {
-                            show: true
-                        },
+                        // label: {
+                        //     show: true
+                        // },
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
-                        data: [0.00, 0.00, 0.00, 0.00]//根据数据改
+                        data: [0.00, 0.00, 0.00, 0.00]
                     },
-                    // 以下不动
                     {
                         name: '土壤',
                         type: 'bar',
@@ -114,10 +99,9 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
-                        data: [2.40, 2.55, 2.70, 2.70]//根据数据改
+                        
+                        data: [2.40, 2.55, 2.70, 2.70]
                     },
-                    // 以下不动
                     {
                         name: '总分',
                         type: 'line',
@@ -128,35 +112,12 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
-                        data: [6.71, 6.44, 6.17, 6.41]//根据数据改
+                        
+                        data: [6.71, 6.44, 6.17, 6.41]
                     },
-                    // 以下不动
-                    {
-                        type: 'pie',
-                        radius: '30%',
-                        center: ['50%', '25%'],
-                        emphasis: {
-                            focus: 'self'
-                        },
-                        label: {
-                            formatter: '{b}: {@d} ({d}%)'
-                        },
-                        // 以上不动
-                        // 以下 'value' 的值根据数据中的权重改
-                        data: [
-                            { value: 0.30, name: '气温' },
-                            { value: 0.40, name: '光照' },
-                            { value: 0.00, name: '水分' },
-                            { value: 0.00, name: '养分' },
-                            { value: 0.30, name: '土壤' }
-                        ]
-                        // 以上 'value' 的值根据数据中的权重改
-                    }
                 ]
             };
 
-            // 以下不用动
             // 使用刚指定的配置项和数据显示图表。
             myChart.setOption(option);
         </script>
