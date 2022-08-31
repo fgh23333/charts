@@ -20,8 +20,6 @@
                 title: {
                     text: '辣椒评分及各项权重'// 标题根据物种进行小更改
                 },
-
-                // 以下不动
                 tooltip: {
                     trigger: 'axis',
                     axisPointer: {
@@ -40,13 +38,10 @@
                 yAxis: {
                     type: 'value'
                 },
-                // 以上不动
-
                 xAxis: {
                     type: 'category',
                     data: ['四川', '云南', '湖南', '广东', '浙江']//根据数据中的省份改
                 },
-                // 以下不动
                 series: [
                     {
                         name: '气温',
@@ -58,10 +53,9 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
+                        
                         data: [1.56, 1.54, 1.64, 2.06, 1.48]//根据数据改
                     },
-                    // 以下不动
                     {
                         name: '光照',
                         type: 'bar',
@@ -72,10 +66,9 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
+                        
                         data: [1.75, 2.25, 1.75, 2.00, 1.75]//根据数据改
                     },
-                    // 以下不动
                     {
                         name: '水分',
                         type: 'bar',
@@ -86,10 +79,9 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
+                        
                         data: [1.62, 0.80, 1.72, 1.20, 1.50]//根据数据改
                     },
-                    // 以下不动
                     {
                         name: '养分',
                         type: 'bar',
@@ -100,10 +92,9 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
+                        
                         data: [2.00, 1.25, 1.75, 1.88, 1.88]//根据数据改
                     },
-                    // 以下不动
                     {
                         name: '土壤',
                         type: 'bar',
@@ -114,10 +105,9 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
+                        
                         data: [0.40, 0.25, 0.35, 0.38, 0.38]//根据数据改
                     },
-                    // 以下不动
                     {
                         name: '总分',
                         type: 'line',
@@ -128,10 +118,9 @@
                         emphasis: {
                             focus: 'series'
                         },
-                        // 以上不动
+                        
                         data: [7.33, 6.09, 7.21, 7.51, 6.98]//根据数据改
                     },
-                    // 以下不动
                     {
                         type: 'pie',
                         radius: '30%',
@@ -142,8 +131,6 @@
                         label: {
                             formatter: '{b}: {@d} ({d}%)'
                         },
-                        // 以上不动
-                        // 以下 'value' 的值根据数据中的权重改
                         data: [
                             { value: 0.25, name: '气温' },
                             { value: 0.25, name: '光照' },
@@ -151,12 +138,10 @@
                             { value: 0.25, name: '养分' },
                             { value: 0.05, name: '土壤' }
                         ]
-                        // 以上 'value' 的值根据数据中的权重改
                     }
                 ]
             };
 
-            // 以下不用动
             // 使用刚指定的配置项和数据显示图表。
             myChart.setOption(option);
         </script>
